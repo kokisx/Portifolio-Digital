@@ -8,19 +8,122 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico"> /* icone que fica na jela */
 </head>
 <body>
-    <header>
-        <nav>
-
+    <!-- MENU DE NAVEGAÇÃO -->
+    <header class="Menu-de-Navegação">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">
+                PL
+            </a>
+            <div class="nome-professor">
+                <span>Prof. Luís</span>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
+                <li>
+                    <a href="#experiencia">Experiência</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
         </nav>
     </header>
-
-    <main> 
-
+    <!-- SEÇÃO INÍCIO -->
+    <main>
+        <section id="inicio" class="inicio">
+            <div class="inicio-conteudo">
+                <p class="saudacao">
+                    Olá, eu sou
+                </p>
+                <h1>
+                    Prof. Luís
+                </h1>
+                <p class="descricao">
+                    Professor e profissional apaixonado por tecnologia,
+                    educação e desenvolvimento de projetos.
+                </p>
+                <a href="#projetos" class="botao">
+                    Conheça meu trabalho
+                </a>
+                <!-- REDES SOCIAIS -->
+                <div class="redes-sociais">
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:email@exemplo.com" aria-label="E-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- IMAGEM DO LUÍS -->
+            <div class="inicio-imagem">
+                <img 
+                    src="img/luis.png" 
+                    alt="Foto do Prof. Luís"
+                >
+            </div>
+        </section>
+        <!-- SEÇÃO SOBRE MIM -->
+        <section id="sobre" class="sobre">
+            <div class="sobre-imagem">
+                <img 
+                    src="img/luis-sobre.png" 
+                    alt="Foto do Prof. Luís"
+                >
+            </div>
+            <div class="sobre-conteudo">
+                <p class="subtitulo">
+                    Sobre mim
+                </p>
+                <h2>
+                    Conheça um pouco da minha trajetória
+                </h2>
+                <p>
+                    Sou o Prof. Luís, profissional dedicado à educação,
+                    tecnologia e desenvolvimento de projetos. Busco
+                    constantemente transformar conhecimento em soluções
+                    práticas e contribuir para a formação de novos
+                    profissionais.
+                </p>
+                <div class="informacoes">
+                    <div class="informacao">
+                        <h3>Formação</h3>
+                        <p>
+                            Graduação e especializações na área de atuação.
+                        </p>
+                    </div>
+                    <div class="informacao">
+                        <h3>Atuação</h3>
+                        <p>
+                            Professor e profissional atuante em projetos
+                            educacionais e tecnológicos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
-    <footer>
-
+    <!-- FOOTER -->
+    <footer id="contato" class="footer">
+        <p>
+            © 2026 Prof. Luís. Todos os direitos reservados.
+        </p>
     </footer>
-
+    <!-- FONT AWESOME PARA OS ÍCONES -->
+    <script 
+        src="https://kit.fontawesome.com/SEU_CODIGO.js" 
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>
