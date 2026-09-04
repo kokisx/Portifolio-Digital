@@ -1,0 +1,386 @@
+/* ================================
+   RESET E CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* ================================
+   VARIÁVEIS
+================================ */
+
+:root {
+    --azul-principal: #2563eb;
+    --azul-escuro: #1e3a8a;
+    --azul-claro: #dbeafe;
+    --texto: #1f2937;
+    --texto-secundario: #64748b;
+    --fundo: #f8fafc;
+    --branco: #ffffff;
+    --borda: #e2e8f0;
+    --rodape: #0f172a;
+    --sombra: 0 10px 25px rgba(15, 23, 42, 0.08);
+    --raio: 12px;
+    --transicao: 0.3s ease;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+}
+
+/* ================================
+   SEÇÕES
+================================ */
+
+section {
+    padding: 80px 20px;
+}
+
+.secao-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: var(--azul-escuro);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section h3 {
+    color: var(--azul-escuro);
+}
+
+/* ================================
+   PROJETOS
+================================ */
+
+.projetos {
+    background-color: var(--branco);
+}
+
+.projetos .secao-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.projetos h2 {
+    margin-bottom: 40px;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projeto-card {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 30px;
+    box-shadow: var(--sombra);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+}
+
+.projeto-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.projeto-card p {
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+}
+
+.projeto-card ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.projeto-card li {
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ================================
+   EXPERIÊNCIA / HABILIDADES
+================================ */
+
+.experiencia {
+    background-color: var(--fundo);
+}
+
+.experiencia h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.habilidades,
+.metodologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.habilidades span,
+.metodologias span {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    color: var(--azul-escuro);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    transition: all var(--transicao);
+}
+
+.habilidades span:hover,
+.metodologias span:hover {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    border-color: var(--azul-principal);
+    transform: translateY(-3px);
+}
+
+/* ================================
+   CONTATO
+================================ */
+
+.contato {
+    background-color: var(--branco);
+}
+
+.contato .secao-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contato h2 {
+    grid-column: 1 / -1;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-info p {
+    color: var(--texto-secundario);
+}
+
+.contato-info a {
+    color: var(--azul-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contato-info a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   FORMULÁRIO
+================================ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: var(--fundo);
+    padding: 30px;
+    border-radius: var(--raio);
+    border: 1px solid var(--borda);
+}
+
+form label {
+    font-weight: bold;
+    color: var(--texto);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background-color: var(--branco);
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transicao), box-shadow var(--transicao);
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--azul-principal);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form button {
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transicao), transform var(--transicao);
+}
+
+form button:hover {
+    background-color: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: var(--rodape);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   ACESSIBILIDADE
+================================ */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--azul-principal);
+    outline-offset: 3px;
+}
+
+/* ================================
+   RESPONSIVIDADE — TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contato .secao-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contato h2 {
+        grid-column: auto;
+    }
+}
+
+/* ================================
+   RESPONSIVIDADE — CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 15px;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-card {
+        padding: 25px;
+    }
+
+    .habilidades,
+    .metodologias {
+        gap: 8px;
+    }
+
+    .habilidades span,
+    .metodologias span {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
