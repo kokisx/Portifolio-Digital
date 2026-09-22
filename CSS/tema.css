@@ -1,0 +1,99 @@
+/* Reserva espaço no cabeçalho para o botão. */
+.menudenav {
+    padding-right: 76px;
+}
+
+/* Botão fixo no canto superior direito. */
+#alternar-tema {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1100;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    background-color: var(--branco);
+    color: var(--texto);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+#alternar-tema:not([hidden]) {
+    display: grid;
+    place-items: center;
+}
+
+#alternar-tema svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#alternar-tema .icone-sol,
+.tema-escuro #alternar-tema .icone-lua {
+    display: none;
+}
+
+.tema-escuro #alternar-tema .icone-sol {
+    display: block;
+    color: #fbbf24;
+}
+
+#alternar-tema:hover {
+    border-color: var(--azul-principal);
+}
+
+/* Reutiliza as variáveis de cores do CSS original. */
+:root.tema-escuro {
+    color-scheme: dark;
+    --azul-escuro: #93c5fd;
+    --azul-claro: #1e3a5f;
+    --texto: #e2e8f0;
+    --texto-secundario: #cbd5e1;
+    --fundo: #0f172a;
+    --branco: #1e293b;
+    --borda: #475569;
+    --rodape: #020617;
+    --sombra: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.tema-escuro body {
+    color: var(--texto);
+    background-color: var(--fundo);
+}
+
+.tema-escuro .inicio {
+    background-color: #172538;
+    border-bottom-color: var(--borda);
+}
+
+.tema-escuro a {
+    color: #93c5fd;
+}
+
+.tema-escuro footer,
+.tema-escuro form button,
+.tema-escuro .habilidades span:hover,
+.tema-escuro .metodologias span:hover {
+    color: #ffffff;
+}
+
+.tema-escuro form button:hover {
+    background-color: #1d4ed8;
+}
+
+.tema-escuro input::placeholder,
+.tema-escuro textarea::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+.tema-escuro :focus-visible {
+    outline-color: #93c5fd;
+}
