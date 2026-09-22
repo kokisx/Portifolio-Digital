@@ -87,6 +87,22 @@ nav {
     margin-bottom: 50px;
 }
 
+.botao {
+    display: inline-block;
+    background-color:#2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #1e3a8a;
+    transform: translateY(-2px);
+}
+
 /* ================================
     icones/informações
 ================================ */
