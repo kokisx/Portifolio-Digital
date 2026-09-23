@@ -11,27 +11,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body id="topo">
-    <button id="alternar-tema" type="button"
-        aria-label="Ativar tema escuro"
-        aria-pressed="false" hidden>
-    <svg class="icone-lua" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
-    </svg>
-    <svg class="icone-sol" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="4"/>
-        <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
-    </svg>
-</button>
     <header class="menudenav">
-    <!-- MENU DE NAVEGAÇÃO -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Menu principal">
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <a href="#inicio" class="logo">
-                
-            </a>
             <div class="nome-professor">
                 <span>Prof. Luís</span>
             </div>
+
+            <button id="alternar-tema" type="button"
+                aria-label="Ativar tema escuro"
+                aria-pressed="false" hidden>
+                <svg class="icone-lua" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+                </svg>
+                <svg class="icone-sol" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+                </svg>
+            </button>
+        </nav>
+
+        <div class="menu-box" id="menu-box" aria-hidden="true">
+            <button class="menu-close" type="button" aria-label="Fechar menu">&times;</button>
             <ul class="menu">
                 <li>
                     <a href="#inicio">Início</a>
@@ -49,7 +55,7 @@
                     <a href="#contato">Contato</a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <main> 
@@ -102,9 +108,9 @@
                 >
             </div>
             <div class="sobre-conteudo">
-                <p class="subtitulo">
-                    Sobre mim
-                </p>
+                <h2 class="subtitulo">
+                    Bem-vindo ao meu portfólio
+                </h2>
                 <h2>
                     Conheça um pouco da minha trajetória
                 </h2>
@@ -159,7 +165,8 @@
                             <strong>Tecnologias:</strong>
                             HTML, CSS, JavaScript, PHP e MySQL.
                         </p>
-                        <a class="botao-projeto" href="#">Ver projeto</a>
+                        
+                        <a class="botao" href="#">Ver projeto</a>
                     </article>
 
                     <article class="projeto-card">
@@ -170,7 +177,8 @@
                             <strong>Tecnologias:</strong>
                             Flutter, Dart e Firebase.
                         </p>
-                        <a class="botao-projeto" href="#">Ver projeto</a>
+                        <br><br>
+                        <a class="botao" href="#">Ver projeto</a>
                     </article>
 
                     <article class="projeto-card">
@@ -181,90 +189,95 @@
                             <strong>Tecnologias:</strong>
                             HTML, CSS, JavaScript e Chart.js.
                         </p>
-                        <a class="botao-projeto" href="#">Ver projeto</a>
+                        <a class="botao" href="#">Ver projeto</a>
                     </article>
                 </div>
             </div>
         </section>
 
-<!-- SEÇÃO EXPERIÊNCIA -->
-<section id="experiencia" class="experiencia">
-    <div class="secao-container">
+<div class="carrossel-experiencias">
 
-        <h2>Experiência Profissional</h2>
+    <button class="seta experiencia-anterior" aria-label="Experiência anterior">
+        &#10094;
+    </button>
 
-        <div class="lista-experiencias">
+    <div class="lista-experiencias">
 
-            <article class="experiencia-card">
-                <span class="experiencia-periodo">
-                    mai. 2026 – atual
-                </span>
-                <h3>Agile Master | Analista de Agilidade</h3>
-                <h4>HST Card Technology</h4>
-                <p class="experiencia-local">
-                    Salvador, Bahia — Remoto
-                </p>
-            </article>
+        <article class="experiencia-card">
+            <span class="experiencia-periodo">
+                mai. 2026 – atual
+            </span>
+            <h3>Agile Master | Analista de Agilidade</h3>
+            <h4>HST Card Technology</h4>
+            <p class="experiencia-local">
+                Salvador, Bahia — Remoto
+            </p>
+        </article>
 
-            <article class="experiencia-card">
-                <span class="experiencia-periodo">
-                    abr. 2025 – mai. 2026
-                </span>
-                <h3>Scrum Master | Product Owner</h3>
-                <h4>V8.TECH</h4>
-                <p class="experiencia-local">
-                    Salvador, Bahia — Remoto
-                </p>
-            </article>
+        <article class="experiencia-card">
+            <span class="experiencia-periodo">
+                abr. 2025 – mai. 2026
+            </span>
+            <h3>Scrum Master | Product Owner</h3>
+            <h4>V8.TECH</h4>
+            <p class="experiencia-local">
+                Salvador, Bahia — Remoto
+            </p>
+        </article>
 
-            <article class="experiencia-card">
-                <span class="experiencia-periodo">
-                    fev. 2024 – atual
-                </span>
-                <h3>Professor</h3>
-                <h4>Unijorge</h4>
-                <p class="experiencia-local">
-                    Salvador, Bahia — Presencial
-                </p>
-            </article>
+        <article class="experiencia-card">
+            <span class="experiencia-periodo">
+                fev. 2024 – atual
+            </span>
+            <h3>Professor</h3>
+            <h4>Unijorge</h4>
+            <p class="experiencia-local">
+                Salvador, Bahia — Presencial
+            </p>
+        </article>
 
-            <article class="experiencia-card">
-                <span class="experiencia-periodo">
-                    fev. 2024 – mar. 2025
-                </span>
-                <h3>Agile Master</h3>
-                <h4>Belasoft</h4>
-                <p class="experiencia-local">
-                    Salvador, Bahia — Remoto
-                </p>
-            </article>
+        <article class="experiencia-card">
+            <span class="experiencia-periodo">
+                fev. 2024 – mar. 2025
+            </span>
+            <h3>Agile Master</h3>
+            <h4>Belasoft</h4>
+            <p class="experiencia-local">
+                Salvador, Bahia — Remoto
+            </p>
+        </article>
 
-            <article class="experiencia-card">
-                <span class="experiencia-periodo">
-                    abr. 2017 – ago. 2021
-                </span>
-                <h3>Agile Master</h3>
-                <h4>Biolab Sanus Farmacêutica</h4>
-                <p class="experiencia-local">
-                    Presencial
-                </p>
-            </article>
+        <article class="experiencia-card">
+            <span class="experiencia-periodo">
+                abr. 2017 – ago. 2021
+            </span>
+            <h3>Agile Master</h3>
+            <h4>Biolab Sanus Farmacêutica</h4>
+            <p class="experiencia-local">
+                Presencial
+            </p>
+        </article>
 
-            <article class="experiencia-card">
-                <span class="experiencia-periodo">
-                    out. 2008 – mar. 2014
-                </span>
-                <h3>Coordenador de TI | Agile Master</h3>
-                <h4>Vivo</h4>
-                <p class="experiencia-local">
-                    Tempo integral — 5 anos e 6 meses
-                </p>
-            </article>
-
-        </div>
+        <article class="experiencia-card">
+            <span class="experiencia-periodo">
+                out. 2008 – mar. 2014
+            </span>
+            <h3>Coordenador de TI | Agile Master</h3>
+            <h4>Vivo</h4>
+            <p class="experiencia-local">
+                Tempo integral — 5 anos e 6 meses
+            </p>
+        </article>
 
     </div>
-</section>
+
+    <button class="seta proxima-experiencia" aria-label="Próxima experiência">
+        &#10095;
+    </button>
+
+</div>
+
+<div class="indicadores-experiencia"></div>
 
 <!-- SEÇÃO HABILIDADES E METODOLOGIAS -->
 <section id="habilidades" class="habilidades-secao">
@@ -276,6 +289,7 @@
 
             <div class="habilidades">
                 <h3>Habilidades</h3>
+                <br>
                 <ul>
                     <li>Gestão de Projetos</li>
                     <li>Scrum</li>
@@ -288,6 +302,7 @@
 
             <div class="metodologias">
                 <h3>Metodologias</h3>
+                <br>
                 <ul>
                     <li>Scrum</li>
                     <li>Kanban</li>
